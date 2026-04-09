@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méliès to Spielberg Projects | Hybrid AI & Live-Action Studio</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- React and Babel for browser-side rendering -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: black; color: #d1d5db; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        const { 
+            Film, Wand2, TrendingUp, Layers, Linkedin, Youtube, 
+            Instagram, Mail, Phone, ArrowRight, ExternalLink, 
+            ChevronDown, BookOpen 
+        } = lucide;
+
+        function App() {
+            const [scrolled, setScrolled] = useState(false);
+
+            useEffect(() => {
+                const handleScroll = () => setScrolled(window.scrollY > 50);
+                window.addEventListener('scroll', handleScroll);
+                return () => window.removeEventListener('scroll', handleScroll);
+            }, []);
+
+            const Icon = ({ name, size = 24, className = "" }) => {
+                const LucideIcon = lucide[name];
+                return LucideIcon ? <LucideIcon size={size} className={className} /> : null;
+            };
+
+            return (
+                <div className="min-h-screen bg-black">
+                    {/* Navigation */}
+                    <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-black/90 backdrop-blur-md py-4 border-b border-gray-900' : 'bg-transparent py-6'}`}>
+                        <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+                            <div className="text-xl md:text-2xl font-serif font-bold tracking-tighter text-white uppercase">
+                                MTSP <span className="text-gray-600 text-sm font-sans tracking-widest ml-2 hidden md:inline-block">Est. 2022</span>
+                            </div>
+                            <div className="flex gap-6 text-sm font-semibold tracking-widest uppercase">
+                                <a href="#about" className="hover:text-white transition-colors hidden md:block">About</a>
+                                <a href="#work" className="hover:text-white transition-colors hidden md:block">Work</a>
+                                <a href="#slate" className="hover:text-white transition-colors hidden md:block">The Slate</a>
+                                <a href="#leadership" className="hover:text-white transition-colors">Leadership</a>
+                            </div>
+                        </div>
+                    </nav>
+
+                    {/* Hero Section */}
+                    <header className="relative h-screen flex flex-col items-center justify-center overflow-hidden px-4">
+                        <div className="absolute inset-0 z-0 opacity-20">
+                            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black to-black z-10" />
+                            <div className="w-full h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-600 via-black to-black" />
+                        </div>
+
+                        <div className="z-10 text-center w-full max-w-5xl mx-auto flex flex-col items-center">
+                            <div className="mb-12 flex flex-col items-center select-none w-full">
+                                <h1 className="text-6xl md:text-[7rem] font-sans font-light tracking-widest text-white leading-none mb-4">Méliès</h1>
+                                <div className="flex items-center justify-center gap-4 md:gap-8 my-2">
+                                    <div className="flex flex-col items-center justify-center text-gray-300 text-[10px] md:text-sm tracking-widest uppercase">
+                                        {'Projects'.split('').map((char, i) => <span key={i} className="mb-1">{char}</span>)}
+                                    </div>
+                                    <div className="w-64 h-40 md:w-96 md:h-64 overflow-hidden relative border-8 border-black shadow-2xl">
+                                        <img src="https://drive.google.com/thumbnail?id=140xA-44QIB9v-ywHufgPPLgSQblXCc1Y&sz=w1000" className="absolute inset-0 w-full h-full object-cover" />
+                                    </div>
+                                    <div className="flex flex-col items-center justify-center text-gray-300 text-[10px] md:text-sm tracking-widest uppercase">
+                                        {'To'.split('').map((char, i) => <span key={i} className="mb-2">{char}</span>)}
+                                    </div>
+                                </div>
+                                <h1 className="text-6xl md:text-[7rem] font-sans font-light tracking-widest text-white leading-none mt-4">Spielberg</h1>
+                            </div>
+                            <p className="mt-8 text-xl md:text-2xl font-light tracking-wide text-gray-400 max-w-2xl mx-auto uppercase">
+                                Bridging 138 Years of Cinema with the Future of AI.
+                            </p>
+                        </div>
+                        <div className="absolute bottom-10 z-10 animate-bounce text-gray-600"><Icon name="ChevronDown" size={32} /></div>
+                    </header>
+
+                    {/* AI Mastery Callout */}
+                    <section id="about" className="py-32 px-6 md:px-12 bg-black border-t border-gray-900">
+                        <div className="max-w-5xl mx-auto text-center">
+                            <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight mb-8">
+                                25,000 Hours of AI Research.<br/> <span className="text-gray-500 italic">213 Distinct Prompt Techniques.</span>
+                            </h2>
+                            <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-4xl mx-auto font-light">
+                                Over the past 5 years, Rishi has dedicated over 25,000 hours to mastering AI generation. His proprietary framework <strong>"The Grand Prompt"</strong> enables a single director to execute the production scale of a 50-person studio.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* Main Work Grid */}
+                    <section id="work" className="py-24 px-6 md:px-12 bg-zinc-950">
+                        <div className="max-w-7xl mx-auto">
+                            <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter text-white mb-12">The Work</h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {/* Emergence of Shiva */}
+                                <a href="https://www.youtube.com/watch?v=A85em5CoKc4" target="_blank" className="group relative aspect-[16/9] md:aspect-[21/9] bg-gray-900 overflow-hidden md:col-span-2 block border border-gray-800">
+                                    <img src="https://img.youtube.com/vi/A85em5CoKc4/maxresdefault.jpg" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col items-center justify-end p-8 text-center pb-12 transition-colors duration-500 group-hover:bg-black/60">
+                                        <h3 className="text-white text-3xl font-bold uppercase mb-4">Emergence of Shiva</h3>
+                                        <p className="text-gray-200 text-lg max-w-3xl mb-4 font-light">A 19-minute space epic designed, scored, and generated in 28 days solo.</p>
+                                        <p className="text-amber-500 text-sm tracking-widest uppercase font-bold">Selected by real-life astronauts | Tsiolkovsky Space Film Festival</p>
+                                    </div>
+                                </a>
+
+                                {/* Body: Dreams of E7 */}
+                                <a href="https://www.youtube.com/watch?v=i_Y3vZHYeUA" target="_blank" className="group relative aspect-video bg-gray-900 overflow-hidden border border-gray-800 block">
+                                    <img src="https://drive.google.com/thumbnail?id=1-UYnX_9KbKv7FsGDlTuiVxeYA4UC7TAI&sz=w1200" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col items-center justify-end p-6 text-center z-10">
+                                        <h3 className="text-white text-2xl font-bold uppercase mb-2">Body: Dreams of E7</h3>
+                                        <p className="text-gray-300 text-sm mb-4">Masterclass in Hybrid Filmmaking featuring International talent.</p>
+                                    </div>
+                                </a>
+
+                                {/* Commercials */}
+                                <a href="https://drive.google.com/drive/u/0/folders/1-ytP_VrcOi23wA8I8SRhadp6jCgL1bTl" target="_blank" className="group relative aspect-video bg-gray-900 overflow-hidden border border-gray-800 block">
+                                    <img src="https://drive.google.com/thumbnail?id=1BSf60aBEc0aHXUReCIue3AM2SKPIeXrN&sz=w1200" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col items-center justify-end p-6 text-center z-10">
+                                        <h3 className="text-white text-2xl font-bold uppercase mb-2">Global Commercials</h3>
+                                        <p className="text-gray-300 text-sm mb-4">Japanese Tourism, Serbian Games, and Healthcare campaigns.</p>
+                                    </div>
+                                </a>
+
+                                {/* Visual Novels */}
+                                <div className="md:col-span-2 bg-zinc-900 border border-gray-800 overflow-hidden group flex flex-col md:flex-row items-center">
+                                    <div className="w-full md:w-1/2 aspect-video overflow-hidden">
+                                        <img src="https://drive.google.com/thumbnail?id=14d4iugB6vDgJNM4Zy1qF11dmfww9NvvV&sz=w1200" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                                    </div>
+                                    <div className="w-full md:w-1/2 p-10">
+                                        <h3 className="text-white text-2xl font-bold uppercase mb-4">MTSP Visual Novels</h3>
+                                        <p className="text-gray-400 text-lg leading-relaxed">A unique fusion of literature and cinematic art. Entirely written, conceptualized, and visually generated by Rishi Goswami.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Upcoming Slate */}
+                    <section id="slate" className="py-24 px-6 md:px-12 bg-black border-t border-gray-900">
+                        <div className="max-w-7xl mx-auto">
+                            <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter text-white mb-12 text-center">The Upcoming Slate</h2>
+                            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                                <div className="space-y-12">
+                                    <div className="border-l-4 border-amber-500 pl-6"><h3 className="text-2xl font-serif text-white">Aaron and Rama</h3><p className="text-gray-400 text-sm">Groundbreaking AI sci-fi in a world-first language.</p></div>
+                                    <div className="border-l-4 border-gray-700 pl-6"><h3 className="text-2xl font-serif text-white">Nothing Survives</h3><p className="text-gray-400 text-sm">6-episode scientific documentary series on the universe.</p></div>
+                                    <div className="border-l-4 border-gray-700 pl-6"><h3 className="text-2xl font-serif text-white">Project Ravan</h3><p className="text-gray-400 text-sm">Visually groundbreaking mythological epic.</p></div>
+                                </div>
+                                <div className="space-y-12">
+                                    <div className="border-l-4 border-gray-700 pl-6"><h3 className="text-2xl font-serif text-white">The 26 Vishnu Avatars</h3><p className="text-gray-400 text-sm">Unprecedented 26-manifestation AI world-building.</p></div>
+                                    <div className="border-l-4 border-red-900 pl-6">
+                                        <h3 className="text-2xl font-serif text-white italic">Untitled Gothic Horror</h3>
+                                        <p className="text-gray-400 text-sm">Streaming Giant Hybrid Feature starring A-list Hollywood/European talent.</p>
+                                        <span className="text-red-600 text-[10px] uppercase font-bold">Delayed due to war. Details Guarded.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Footer */}
+                    <footer className="bg-zinc-950 py-20 px-6 border-t border-gray-900">
+                        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                            <div className="mb-8 md:mb-0">
+                                <h2 className="text-3xl font-serif text-white mb-4">Start a Project.</h2>
+                                <p className="text-gray-400">Rishi@meliestospielberg.in</p>
+                                <p className="text-gray-400">+91 7738 203 995</p>
+                            </div>
+                            <div className="flex gap-6">
+                                <a href="https://www.youtube.com/@MeliestoSpielbergProjects" target="_blank" className="text-gray-400 hover:text-white transition-colors"><Icon name="Youtube" size={32} /></a>
+                                <a href="https://www.instagram.com/meliestospielberg/" target="_blank" className="text-gray-400 hover:text-white transition-colors"><Icon name="Instagram" size={32} /></a>
+                                <a href="https://www.linkedin.com/in/rishi-goswami-5721b7306/" target="_blank" className="text-gray-400 hover:text-white transition-colors"><Icon name="Linkedin" size={32} /></a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
