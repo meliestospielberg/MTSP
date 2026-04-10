@@ -40,7 +40,9 @@
                 <svg className={className} viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
             ),
             Imdb: ({ size = 20, className = "" }) => (
-                <svg className={className} viewBox="0 0 24 24" width={size} height={size} fill="currentColor"><path d="M22.8 5.68H1.2c-.66 0-1.2.54-1.2 1.2v10.24c0 .66.54 1.2 1.2 1.2h21.6c.66 0 1.2-.54 1.2-1.2V6.88c0-.66-.54-1.2-1.2-1.2ZM5.9 14.86H4.35v-5.6H5.9v5.6ZM10.55 9.26h-1.64l-1.07 3.55-1.07-3.55H5.13v5.6h1.44v-3.72l.84 2.8h1.03l.84-2.8v3.72h1.44v-5.6ZM13.84 10.42h-1.12v3.3h1.12c.91 0 1.65-.74 1.65-1.65 0-.91-.74-1.65-1.65-1.65ZM19.98 12.06c0 1.54-1.25 2.8-2.8 2.8h-1.05v-5.6h1.05c1.55 0 2.8 1.26 2.8 2.8ZM17.18 10.42v3.3h.84c.91 0 1.65-.74 1.65-1.65 0-.91-.74-1.65-1.65-1.65h-.84Z"/></svg>
+                <svg className={className} viewBox="0 0 24 24" width={size} height={size} fill="currentColor">
+                    <path d="M22.8 5.68H1.2c-.66 0-1.2.54-1.2 1.2v10.24c0 .66.54 1.2 1.2 1.2h21.6c.66 0 1.2-.54 1.2-1.2V6.88c0-.66-.54-1.2-1.2-1.2ZM5.9 14.86H4.35v-5.6H5.9v5.6ZM10.55 9.26h-1.64l-1.07 3.55-1.07-3.55H5.13v5.6h1.44v-3.72l.84 2.8h1.03l.84-2.8v3.72h1.44v-5.6ZM13.84 10.42h-1.12v3.3h1.12c.91 0 1.65-.74 1.65-1.65 0-.91-.74-1.65-1.65-1.65ZM19.98 12.06c0 1.54-1.25 2.8-2.8 2.8h-1.05v-5.6h1.05c1.55 0 2.8 1.26 2.8 2.8ZM17.18 10.42v3.3h.84c.91 0 1.65-.74 1.65-1.65 0-.91-.74-1.65-1.65-1.65h-.84Z" />
+                </svg>
             ),
             Film: ({ size = 20, className = "" }) => (
                 <svg className={className} viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
@@ -126,14 +128,35 @@
                         </div>
                     </header>
 
+                    {/* The Statement */}
+                    <section className="py-24 px-6 md:px-12 bg-zinc-950 border-t border-gray-900">
+                        <div className="max-w-5xl mx-auto text-center space-y-12">
+                            <h2 className="text-2xl md:text-4xl font-serif text-white leading-relaxed italic">
+                                "There is a particular madness in loving cinema — the kind Dostoevsky would have diagnosed, Freud would have billed you for, Kafka would have filed under the wrong department, and Nietzsche would have called the only honest religion left."
+                            </h2>
+                            <div className="text-lg md:text-xl text-gray-400 font-light leading-relaxed space-y-6 max-w-4xl mx-auto">
+                                <p>We contracted it early. We have not recovered. We do not intend to.</p>
+                                <p>
+                                    Méliès to Spielberg Projects is a Mumbai-based production house at the forefront of the Hybrid AI & Live-Action movement. We specialize in the high-end integration of traditional cinematic techniques with advanced AI workflows. The AI filmmaking revolution is not coming — it arrived. It has already made something beautiful.
+                                </p>
+                                <p>
+                                    The only question remaining is whether your next project will be part of it, or watching it from the cinema queue.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
                     {/* AI Mastery Callout */}
                     <section id="about" className="py-24 px-6 md:px-12 bg-black border-t border-gray-900">
                         <div className="max-w-5xl mx-auto text-center">
                             <h2 className="text-3xl md:text-5xl font-serif text-white leading-tight mb-8">
                                 25,000 Hours of AI Research.<br/> <span className="text-gray-500 italic">213 Distinct Prompt Techniques.</span>
                             </h2>
-                            <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-4xl mx-auto font-light">
-                                Over the past 5 years, Rishi has dedicated 25,000+ hours to mastering AI generation. His proprietary framework <strong>"The Grand Prompt"</strong> empowers a single director to execute the scale of a 50-person studio.
+                            <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-4xl mx-auto font-light mb-6">
+                                The result is <strong>The Grand Prompt</strong>—a proprietary AI direction framework built through production, not theory. It puts the scale of a 50-person studio in the hands of one director with a point of view. That director is me.
+                            </p>
+                            <p className="text-lg md:text-xl text-gray-500 leading-relaxed max-w-4xl mx-auto font-light italic">
+                                This is not a productivity hack. It is the Übermensch principle applied to production economics.
                             </p>
                         </div>
                     </section>
@@ -149,9 +172,9 @@
                                     <img src="https://img.youtube.com/vi/A85em5CoKc4/maxresdefault.jpg" className="absolute inset-0 w-full h-full object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col items-center justify-end p-8 text-center pb-12">
                                         <h3 className="text-white text-2xl md:text-3xl font-bold uppercase mb-4">Emergence of Shiva</h3>
-                                        <p className="text-gray-200 text-sm md:text-base max-w-3xl mb-4 font-light">Generated entirely in AI solo in 28 days—a feat unmatched by teams of 50.</p>
+                                        <p className="text-gray-200 text-sm md:text-base max-w-3xl mb-4 font-light">Generated entirely in AI, solo, in 28 days. A 19-minute space saga merging ancient Vedic roots with a futuristic vision.</p>
                                         <p className="text-amber-500 text-xs md:text-sm tracking-widest uppercase font-bold flex items-center gap-2">
-                                            <Icons.Award /> Selected by astronauts | Tsiolkovsky Space Film Festival
+                                            <Icons.Award /> Selected by cosmonauts | Tsiolkovsky Space Film Festival. The universe, apparently, has good taste.
                                         </p>
                                     </div>
                                 </a>
@@ -161,7 +184,7 @@
                                     <img src="https://drive.google.com/thumbnail?id=1-UYnX_9KbKv7FsGDlTuiVxeYA4UC7TAI&sz=w1200" className="absolute inset-0 w-full h-full object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent flex flex-col items-center justify-end p-6 text-center z-10">
                                         <h3 className="text-white text-xl font-bold uppercase mb-2">Body: Dreams of E7</h3>
-                                        <p className="text-gray-300 text-xs mb-4">Hybrid Filmmaking. Live actors integrated with AI world-building.</p>
+                                        <p className="text-gray-300 text-xs mb-4">Hybrid Cinema. Integrates live actors on physical sets with AI-generated worlds—a pipeline most studios are currently forming committees to discuss.</p>
                                         <span className="text-amber-500 text-[10px] uppercase border border-amber-500/30 px-3 py-1">Watch Film</span>
                                     </div>
                                 </a>
@@ -171,20 +194,20 @@
                                     <img src="https://drive.google.com/thumbnail?id=1BSf60aBEc0aHXUReCIue3AM2SKPIeXrN&sz=w1200" className="absolute inset-0 w-full h-full object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent flex flex-col items-center justify-end p-6 text-center z-10">
                                         <h3 className="text-white text-xl font-bold uppercase mb-2">Global Commercials</h3>
-                                        <p className="text-gray-300 text-xs mb-4">Japanese Tourism, Serbian Games, and Healthcare branding.</p>
+                                        <p className="text-gray-300 text-xs mb-4">High-end campaigns including Japanese Tourism, Serbian Games, and Healthcare branding.</p>
                                         <span className="text-amber-500 text-[10px] uppercase border border-amber-500/30 px-3 py-1">Portfolio Vault</span>
                                     </div>
                                 </a>
 
-                                {/* Art Gallery Banner */}
-                                <a href="https://drive.google.com/drive/folders/1BxQfa5XZrEa1wgHX8If87WmY8kw7K10k" target="_blank" className="group relative md:col-span-2 aspect-[21/9] bg-gray-900 overflow-hidden block border border-gray-800">
+                                {/* Art Gallery Banner - Link Disabled */}
+                                <div className="group relative md:col-span-2 aspect-[21/9] bg-gray-900 overflow-hidden block border border-gray-800">
                                     <img src="https://drive.google.com/thumbnail?id=1bobY6C_QPw6ZrAgOECsXtl064u57Xy2C&sz=w1600" className="absolute inset-0 w-full h-full object-cover" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent flex flex-col items-center justify-end p-8 text-center z-10">
                                         <h3 className="text-white text-2xl md:text-3xl font-bold uppercase mb-3">AI Fine Art Gallery</h3>
-                                        <p className="text-gray-200 text-xs mb-6 max-w-2xl">Curated collection of 30+ fine art pieces meticulously refined through AI workflows.</p>
-                                        <span className="inline-flex items-center gap-2 border border-white px-6 py-2 uppercase tracking-widest text-[10px] transition-colors">Enter Gallery</span>
+                                        <p className="text-gray-200 text-xs md:text-sm mb-6 max-w-3xl font-light">Thirty-plus original paintings—each a canvas where cinematic composition meets literary intent. The difference between a generated image and a work of art is the decision behind it.</p>
+                                        <span className="inline-flex items-center gap-2 border border-white/40 px-6 py-2 uppercase tracking-widest text-[10px] text-gray-400">Vault Locked</span>
                                     </div>
-                                </a>
+                                </div>
                             </div>
 
                             {/* Cinematic Showcase */}
@@ -207,7 +230,10 @@
                             </div>
 
                             {/* Music Poetry Grid */}
-                            <div className="mt-20 mb-8"><h2 className="text-2xl font-bold uppercase tracking-tighter text-white border-b border-gray-800 pb-4">Music & Visual Poetry</h2></div>
+                            <div className="mt-20 mb-8">
+                                <h2 className="text-2xl font-bold uppercase tracking-tighter text-white">Music & Visual Poetry</h2>
+                                <p className="text-gray-400 text-sm font-light mt-2 border-b border-gray-800 pb-4 italic">Original compositions scored using AI as an instrument—not as a replacement for musicianship, but as its most radical extension since the synthesiser.</p>
+                            </div>
                             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
                                 {[
                                     { id: 'e84smTQrNiU', title: 'We Are MTSP' }, { id: 'p-BIBkI-nDc', title: "Stranger's Dream" },
@@ -255,16 +281,16 @@
                                         <h3 className="text-white text-xl md:text-2xl font-bold uppercase mb-2 flex items-center gap-3">
                                             <span className="text-amber-500"><Icons.BookOpen /></span> Visual Novels
                                         </h3>
-                                        <p className="text-gray-400 text-sm md:text-lg leading-relaxed font-light">Literary-cinematic fusion written and visually generated by Rishi Goswami, pushing the boundaries of immersive storytelling.</p>
+                                        <p className="text-gray-400 text-sm md:text-base leading-relaxed font-light">Literary-cinematic fusions placing Kafka's interior dread inside a frame that moves. He would have appreciated the format. He would have found the subject matter depressingly familiar.</p>
                                     </div>
                                 </div>
                                 <div className="bg-zinc-900 border-l-4 border-l-blue-600 border-y border-r border-gray-800 p-8 flex flex-col justify-center">
                                     <h3 className="text-white text-xl md:text-2xl font-bold uppercase mb-4">MTSP Innovation</h3>
                                     <div className="space-y-6">
-                                        <p className="text-gray-300 text-sm font-light uppercase tracking-widest">Engineering the future of cinema.</p>
+                                        <p className="text-gray-300 text-sm font-light uppercase tracking-widest">Because the Tools Do Not Yet Exist.</p>
                                         <ul className="text-gray-400 text-xs md:text-sm space-y-4 font-light">
-                                            <li><strong className="text-white block font-bold uppercase tracking-wider text-[10px] md:text-xs">4K AI Remaster Initiative:</strong> Remastering <em>The Last Sunshine</em>, <em>Abstract</em>, and foundational documentaries into high-end 4K AI.</li>
-                                            <li><strong className="text-white block font-bold uppercase tracking-wider text-[10px] md:text-xs">Proprietary R&D:</strong> Engineering proprietary digital AI visual equipment and software from the ground up.</li>
+                                            <li><strong className="text-white block font-bold uppercase tracking-wider text-[10px] md:text-xs">Proprietary R&D:</strong> Engineering proprietary AI visual software and hardware from the ground up. The studio does not wait for the industry to build what it needs. This is either visionary or borderline Kafkaesque. In all probability, both.</li>
+                                            <li><strong className="text-white block font-bold uppercase tracking-wider text-[10px] md:text-xs">4K AI Remaster Initiative:</strong> Restoring <em>The Last Sunshine</em>, <em>Abstract</em>, and foundational documentary work into high-end 4K.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -273,23 +299,23 @@
                             {/* Process & Legacy */}
                             <div className="mt-20 mb-8"><h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter text-white border-b border-gray-800 pb-4">Process & Legacy</h2></div>
                             <div className="grid md:grid-cols-3 gap-6 mb-12">
-                                {/* Storyboards */}
-                                <div className="group relative aspect-video bg-zinc-900 border border-gray-800 overflow-hidden block cursor-pointer">
-                                    <img src="https://drive.google.com/thumbnail?id=1eAh2rqPE30XE8NZkfWy1GjisrZQed9Zl&sz=w1000" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                                    <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center p-6 text-center group-hover:bg-black/80 transition-colors">
+                                {/* Storyboards - Link Disabled */}
+                                <div className="group relative aspect-video bg-zinc-900 border border-gray-800 overflow-hidden block">
+                                    <img src="https://drive.google.com/thumbnail?id=1eAh2rqPE30XE8NZkfWy1GjisrZQed9Zl&sz=w1000" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                                    <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center p-6 text-center">
                                         <h4 className="text-white text-xl font-bold uppercase mb-2">Storyboards</h4>
-                                        <p className="text-gray-300 text-[11px] font-light mb-4">Meticulous pre-visualization frameworks shaping our narratives.</p>
-                                        <span className="border border-white px-4 py-1 text-[9px] uppercase tracking-widest hover:bg-white hover:text-black transition-colors">View Archives</span>
+                                        <p className="text-gray-300 text-[11px] font-light mb-4">Meticulous pre-visualization frameworks that reduce traditional development costs by 70%. The unconscious must be drawn before it can be filmed.</p>
+                                        <span className="border border-white/40 px-4 py-1 text-[9px] uppercase tracking-widest text-gray-400">Archives Locked</span>
                                     </div>
                                 </div>
 
-                                {/* Behind the Scenes */}
-                                <div className="group relative aspect-video bg-zinc-900 border border-gray-800 overflow-hidden block cursor-pointer">
-                                    <img src="https://drive.google.com/thumbnail?id=1Li_zPj_tovEnWXPxNcAy0QOeUTi7R9WG&sz=w1000" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                                    <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center p-6 text-center group-hover:bg-black/80 transition-colors">
+                                {/* Behind the Scenes - Link Disabled */}
+                                <div className="group relative aspect-video bg-zinc-900 border border-gray-800 overflow-hidden block">
+                                    <img src="https://drive.google.com/thumbnail?id=1Li_zPj_tovEnWXPxNcAy0QOeUTi7R9WG&sz=w1000" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+                                    <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center p-6 text-center">
                                         <h4 className="text-white text-xl font-bold uppercase mb-2">Behind The Scenes</h4>
-                                        <p className="text-gray-300 text-[11px] font-light mb-4">Unlocking the hybrid pipeline from text concepts to final renders.</p>
-                                        <span className="border border-white px-4 py-1 text-[9px] uppercase tracking-widest hover:bg-white hover:text-black transition-colors">View BTS</span>
+                                        <p className="text-gray-300 text-[11px] font-light mb-4">Unlocking the hybrid pipeline from raw text concepts to final cinematic renders.</p>
+                                        <span className="border border-white/40 px-4 py-1 text-[9px] uppercase tracking-widest text-gray-400">Vault Locked</span>
                                     </div>
                                 </div>
 
@@ -312,17 +338,17 @@
                             <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter text-white mb-16 text-center">Upcoming Slate</h2>
                             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                                 <div className="space-y-12">
-                                    <div className="border-l-4 border-amber-500 pl-6 group"><h3 className="text-xl font-serif text-white mb-1 group-hover:text-amber-500 transition-colors">Aaron and Rama</h3><p className="text-gray-400 text-sm font-light">Groundbreaking AI sci-fi in a world-first language.</p></div>
-                                    <div className="border-l-4 border-gray-700 pl-6 group"><h3 className="text-xl font-serif text-white mb-1 group-hover:text-gray-400 transition-colors">Nothing Survives</h3><p className="text-gray-400 text-sm font-light">6-episode scientific documentary series.</p></div>
-                                    <div className="border-l-4 border-gray-700 pl-6 group"><h3 className="text-xl font-serif text-white mb-1 group-hover:text-gray-400 transition-colors">Project Ravan</h3><p className="text-gray-400 text-sm font-light">Mythological epic centering on the antagonist.</p></div>
+                                    <div className="border-l-4 border-amber-500 pl-6 group"><h3 className="text-xl font-serif text-white mb-1 group-hover:text-amber-500 transition-colors">Aaron and Rama</h3><p className="text-gray-400 text-sm font-light">AI sci-fi in a world-first constructed language.</p></div>
+                                    <div className="border-l-4 border-gray-700 pl-6 group"><h3 className="text-xl font-serif text-white mb-1">Nothing Survives</h3><p className="text-gray-400 text-sm">6-episode scientific documentary series.</p></div>
+                                    <div className="border-l-4 border-gray-700 pl-6 group"><h3 className="text-xl font-serif text-white mb-1">Project Ravan</h3><p className="text-gray-400 text-sm">Mythological epic centring the antagonist, not the hero.</p></div>
                                 </div>
                                 <div className="space-y-12">
-                                    <div className="border-l-4 border-gray-700 pl-6 group"><h3 className="text-xl font-serif text-white mb-1 group-hover:text-gray-400 transition-colors">Strange Battle of Hanuman</h3><p className="text-gray-400 text-sm font-light">Action-heavy reimagining of unseen, high-scale mythological warfare.</p></div>
-                                    <div className="border-l-4 border-gray-700 pl-6 group"><h3 className="text-xl font-serif text-white mb-1 group-hover:text-gray-400 transition-colors">26 Vishnu Avatars</h3><p className="text-gray-400 text-sm font-light">Visualizing all manifestations of Vishnu.</p></div>
+                                    <div className="border-l-4 border-gray-700 pl-6 group"><h3 className="text-xl font-serif text-white mb-1">Strange Battle of Hanuman</h3><p className="text-gray-400 text-sm font-light">Action-heavy reimagining of unseen, high-scale mythological warfare.</p></div>
+                                    <div className="border-l-4 border-gray-700 pl-6 group"><h3 className="text-xl font-serif text-white mb-1">26 Vishnu Avatars</h3><p className="text-gray-400 text-sm font-light">Visualising every manifestation of Vishnu.</p></div>
                                     <div className="border-l-4 border-red-900 pl-6 bg-red-950/10 p-4">
                                         <h3 className="text-xl font-serif text-white italic mb-1">Untitled Gothic Horror Feature</h3>
-                                        <p className="text-gray-400 text-sm font-light mb-2">A-list Hollywood hybrid directed by Rishi Goswami. Shot in Romania.</p>
-                                        <span className="text-red-600 text-[10px] uppercase font-bold block mt-1">Status: Delayed due to war.</span>
+                                        <p className="text-gray-400 text-sm font-light mb-2">A-list Hollywood hybrid. Shot in Romania.</p>
+                                        <span className="text-red-600 text-[10px] uppercase font-bold block mt-1">Currently delayed due to war — which is, in fairness, a more dramatic production note than most directors can claim.</span>
                                     </div>
                                 </div>
                             </div>
@@ -341,9 +367,15 @@
                                 <div className="md:col-span-7">
                                     <h4 className="text-amber-500 uppercase tracking-widest text-xs font-bold mb-2">Founder & Director</h4>
                                     <h2 className="text-4xl md:text-6xl font-serif text-white mb-6 leading-none">Rishi Goswami</h2>
-                                    <p className="text-gray-400 leading-relaxed font-light text-base md:text-lg mb-8">Filmmaker and pioneer in Hybrid AI/Live-Action production. Redefining production scale through cinematic mastery.</p>
-                                    <div className="flex flex-wrap gap-4">
-                                        <a href="https://www.linkedin.com/in/rishi-goswami-5721b7306/" target="_blank" className="inline-flex items-center gap-2 border border-gray-700 px-6 py-3 uppercase tracking-widest text-[10px] font-bold hover:border-white transition-all">
+                                    <div className="space-y-6 text-gray-300 leading-relaxed font-light text-sm md:text-base mb-8">
+                                        <p className="italic text-gray-400 text-lg border-l-2 border-amber-500 pl-4">"There is a man who paints worlds that do not exist, scores music for civilisations not yet born, directs films without a crew of fifty, and still somehow finds time to adapt Orwell into a cyberpunk nightmare."</p>
+                                        <p>Before any of this, there were sets. Live actors. Crews. Deadlines that cameras make brutally honest. I wrote and directed for major global networks, led creative direction across top-tier television, and served as Head Writer and Pitch Supervisor developing original series.</p>
+                                        <p>The live-action decade is not a backstory. It is the reason the AI work has a spine.</p>
+                                        <p>Over ten years across live-action sets and AI frontiers, I have built a practice that refuses to choose between craft and technology—because the choice itself is a false one, invented by people who are afraid of both.</p>
+                                    </div>
+                                    
+                                    <div className="flex flex-col items-start gap-4">
+                                        <a href="https://www.linkedin.com/in/rishi-goswami-5721b7306/" target="_blank" className="inline-flex items-center gap-2 border border-gray-700 px-6 py-3 uppercase tracking-widest text-[10px] font-bold hover:border-white hover:text-white transition-all text-gray-300">
                                             <Icons.Linkedin size={16} /> LinkedIn
                                         </a>
                                     </div>
@@ -373,13 +405,18 @@
 
                     {/* Footer */}
                     <footer className="bg-black py-24 px-6 border-t border-gray-900">
-                        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center">
-                            <div className="mb-12 md:mb-0 md:text-left">
-                                <h2 className="text-3xl font-serif text-white mb-6 italic">Connect.</h2>
-                                <p className="text-gray-400 font-light text-lg mb-1">Rishi@meliestospielberg.in</p>
-                                <p className="text-gray-600 text-xs font-bold uppercase">+91 7738 203 995</p>
+                        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
+                            <div className="space-y-6">
+                                <h2 className="text-3xl font-serif text-white italic">Start a Project.</h2>
+                                <p className="text-gray-400 font-light text-sm leading-relaxed max-w-lg mx-auto md:mx-0">
+                                    Looking for a collaborator, a commission, or a conversation — with any agency, studio, or AI division that understands that the future of cinema is not being built in committees. It is being built now. By one person, in Mumbai, who has already shipped the proof.
+                                </p>
+                                <div>
+                                    <p className="text-white font-light text-lg mb-1 hover:text-gray-300 transition-colors">Rishi@meliestospielberg.in</p>
+                                    <p className="text-gray-600 text-xs font-bold uppercase">+91 7738 203 995</p>
+                                </div>
                             </div>
-                            <div className="flex gap-8 md:gap-10">
+                            <div className="flex justify-center md:justify-end gap-8 md:gap-10">
                                 <a href="https://www.youtube.com/@MeliestoSpielbergProjects" target="_blank" className="text-gray-600 hover:text-white transition-all transform hover:scale-110"><Icons.Youtube size={32} /></a>
                                 <a href="https://www.instagram.com/meliestospielberg/" target="_blank" className="text-gray-600 hover:text-white transition-all transform hover:scale-110"><Icons.Instagram size={32} /></a>
                                 <a href="https://www.linkedin.com/company/meliès-to-spielberg-projects/?viewAsMember=true" target="_blank" className="text-gray-600 hover:text-white transition-all transform hover:scale-110"><Icons.Linkedin size={32} /></a>
