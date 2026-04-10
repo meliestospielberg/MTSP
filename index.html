@@ -30,26 +30,29 @@
 
         // Custom Inline SVG Icons for 100% Reliability
         const Icons = {
-            Instagram: () => (
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            Instagram: ({ size = 20, className = "" }) => (
+                <svg className={className} viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             ),
-            Youtube: () => (
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.71.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>
+            Youtube: ({ size = 20, className = "" }) => (
+                <svg className={className} viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.11 1 12 1 12s0 3.89.46 5.58a2.78 2.78 0 0 0 1.94 2c1.71.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.89 23 12 23 12s0-3.89-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"></polygon></svg>
             ),
-            Linkedin: () => (
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            Linkedin: ({ size = 20, className = "" }) => (
+                <svg className={className} viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
             ),
-            Film: () => (
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+            Imdb: ({ size = 20, className = "" }) => (
+                <svg className={className} viewBox="0 0 24 24" width={size} height={size} fill="currentColor"><path d="M22.8 5.68H1.2c-.66 0-1.2.54-1.2 1.2v10.24c0 .66.54 1.2 1.2 1.2h21.6c.66 0 1.2-.54 1.2-1.2V6.88c0-.66-.54-1.2-1.2-1.2ZM5.9 14.86H4.35v-5.6H5.9v5.6ZM10.55 9.26h-1.64l-1.07 3.55-1.07-3.55H5.13v5.6h1.44v-3.72l.84 2.8h1.03l.84-2.8v3.72h1.44v-5.6ZM13.84 10.42h-1.12v3.3h1.12c.91 0 1.65-.74 1.65-1.65 0-.91-.74-1.65-1.65-1.65ZM19.98 12.06c0 1.54-1.25 2.8-2.8 2.8h-1.05v-5.6h1.05c1.55 0 2.8 1.26 2.8 2.8ZM17.18 10.42v3.3h.84c.91 0 1.65-.74 1.65-1.65 0-.91-.74-1.65-1.65-1.65h-.84Z"/></svg>
             ),
-            Award: () => (
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+            Film: ({ size = 20, className = "" }) => (
+                <svg className={className} viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
             ),
-            ChevronDown: () => (
-                <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            Award: ({ size = 20, className = "" }) => (
+                <svg className={className} viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
             ),
-            BookOpen: () => (
-                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+            ChevronDown: ({ size = 32, className = "" }) => (
+                <svg className={className} viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            ),
+            BookOpen: ({ size = 24, className = "" }) => (
+                <svg className={className} viewBox="0 0 24 24" width={size} height={size} stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
             )
         };
 
@@ -79,6 +82,8 @@
                                 <div className="flex items-center gap-4">
                                     <a href="https://www.youtube.com/@MeliestoSpielbergProjects" target="_blank" className="hover:text-white transition-colors"><Icons.Youtube /></a>
                                     <a href="https://www.instagram.com/meliestospielberg/" target="_blank" className="hover:text-white transition-colors"><Icons.Instagram /></a>
+                                    <a href="https://www.linkedin.com/company/meliès-to-spielberg-projects/?viewAsMember=true" target="_blank" className="hover:text-white transition-colors"><Icons.Linkedin /></a>
+                                    <a href="https://www.imdb.com/search/title/?companies=co0926374" target="_blank" className="hover:text-white transition-colors"><Icons.Imdb /></a>
                                 </div>
                             </div>
                         </div>
@@ -339,10 +344,7 @@
                                     <p className="text-gray-400 leading-relaxed font-light text-base md:text-lg mb-8">Filmmaker and pioneer in Hybrid AI/Live-Action production. Redefining production scale through cinematic mastery.</p>
                                     <div className="flex flex-wrap gap-4">
                                         <a href="https://www.linkedin.com/in/rishi-goswami-5721b7306/" target="_blank" className="inline-flex items-center gap-2 border border-gray-700 px-6 py-3 uppercase tracking-widest text-[10px] font-bold hover:border-white transition-all">
-                                            <Icons.Linkedin /> LinkedIn
-                                        </a>
-                                        <a href="https://www.imdb.com/search/title/?companies=co0926374" target="_blank" className="inline-flex items-center gap-2 border border-gray-700 px-6 py-3 uppercase tracking-widest text-[10px] font-bold hover:border-white transition-all">
-                                            <Icons.Film /> IMDB
+                                            <Icons.Linkedin size={16} /> LinkedIn
                                         </a>
                                     </div>
                                 </div>
@@ -377,10 +379,11 @@
                                 <p className="text-gray-400 font-light text-lg mb-1">Rishi@meliestospielberg.in</p>
                                 <p className="text-gray-600 text-xs font-bold uppercase">+91 7738 203 995</p>
                             </div>
-                            <div className="flex gap-10">
-                                <a href="https://www.youtube.com/@MeliestoSpielbergProjects" target="_blank" className="text-gray-600 hover:text-white transition-all transform hover:scale-110"><Icons.Youtube /></a>
-                                <a href="https://www.instagram.com/meliestospielberg/" target="_blank" className="text-gray-600 hover:text-white transition-all transform hover:scale-110"><Icons.Instagram /></a>
-                                <a href="https://www.linkedin.com/in/rishi-goswami-5721b7306/" target="_blank" className="text-gray-600 hover:text-white transition-all transform hover:scale-110"><Icons.Linkedin /></a>
+                            <div className="flex gap-8 md:gap-10">
+                                <a href="https://www.youtube.com/@MeliestoSpielbergProjects" target="_blank" className="text-gray-600 hover:text-white transition-all transform hover:scale-110"><Icons.Youtube size={32} /></a>
+                                <a href="https://www.instagram.com/meliestospielberg/" target="_blank" className="text-gray-600 hover:text-white transition-all transform hover:scale-110"><Icons.Instagram size={32} /></a>
+                                <a href="https://www.linkedin.com/company/meliès-to-spielberg-projects/?viewAsMember=true" target="_blank" className="text-gray-600 hover:text-white transition-all transform hover:scale-110"><Icons.Linkedin size={32} /></a>
+                                <a href="https://www.imdb.com/search/title/?companies=co0926374" target="_blank" className="text-gray-600 hover:text-white transition-all transform hover:scale-110"><Icons.Imdb size={32} /></a>
                             </div>
                         </div>
                     </footer>
