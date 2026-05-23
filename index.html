@@ -162,18 +162,15 @@
             return (
                 <div className="min-h-screen relative z-10 antialiased">
                     
-                    {/* Hidden Custom Audio Player */}
                     <audio 
                         ref={audioRef}
                         src="https://drive.google.com/uc?export=download&id=1FfCdvFIvCrMXkNDxisIi6eUl0liNdZSV"
                         loop
                     />
 
-                    {/* Classical Navbar */}
                     <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur shadow-md py-4' : 'bg-transparent py-8'}`}>
                         <div className="max-w-7xl mx-auto px-8 flex justify-between items-center">
                             <div className="flex items-center">
-                                {/* MTSP Logo instead of text */}
                                 <img src="https://drive.google.com/thumbnail?id=1s4cCJKAPwQ5k0SruDN2W69dYbbYl__WR&sz=w500" alt="MTSP Logo" className="h-10 md:h-14 object-contain" />
                             </div>
                             <div className="flex items-center gap-8 text-xs font-sans tracking-[0.15em] text-slate-600 uppercase font-semibold">
@@ -186,7 +183,6 @@
                                 <a href="#innovation" className="hover:text-[#d4af37] transition-colors hidden lg:block">Innovation</a>
                                 <a href="#architects" className="hover:text-[#d4af37] transition-colors hidden md:block">Architects</a>
                                 
-                                {/* Audio Toggle Button */}
                                 <button onClick={toggleAudio} className="flex items-center gap-2 border border-[#d4af37] px-4 py-2 text-[#d4af37] hover:bg-[#d4af37] hover:text-white transition-all ml-4">
                                     {isPlaying ? (
                                         <>
@@ -204,7 +200,6 @@
                         </div>
                     </nav>
 
-                    {/* Landing Page / Header */}
                     <header className="relative pt-40 pb-20 px-4 md:px-8 max-w-7xl mx-auto min-h-screen flex flex-col justify-center items-center bg-fresco border-b border-[#d4af37]/20">
                         <div className="text-center w-full max-w-5xl relative z-10">
                             <h1 className="text-4xl md:text-5xl lg:text-7xl font-renaissance text-slate-900 leading-tight mb-8 drop-shadow-sm uppercase">
@@ -212,7 +207,7 @@
                             </h1>
                             <div className="border-l-4 gold-border pl-6 max-w-4xl mx-auto text-left mb-16">
                                 <p className="font-classic text-xl md:text-3xl text-slate-800 leading-relaxed font-medium italic">
-                                    "And not just any award — an award selected and curated by the real cosmonauts, as a sign of pioneering and harnessing the energy of AI and using it in the movie like what Tsiolkovsky did."
+                                    "And not just any award — an award selected and curated by real cosmonauts, as a sign of pioneering and harnessing the energy of AI and using it in the movie, just as Tsiolkovsky did with the rocket engine."
                                 </p>
                             </div>
                             
@@ -231,25 +226,21 @@
                         </div>
                     </header>
 
-                    {/* CHAPTER I: Enter the Valhalla (Arrival) */}
                     <section id="arrival" className="bg-marble py-32 px-4 md:px-8 relative z-20">
                         <div className="max-w-6xl mx-auto">
                             <ChapterHeading chapter="Chapter I" title="Enter the Valhalla" />
                             
                             <div className="grid md:grid-cols-12 gap-12 items-center mt-12">
-                                {/* Left: The Sublime Statement */}
                                 <div className="md:col-span-5 font-classic italic text-3xl md:text-4xl leading-relaxed text-slate-700 border-l-4 gold-border pl-8 py-4">
                                     "MTSP — We have the power to go into the latent space and access whatever we want, using advanced LLM models and customized tools."
                                 </div>
                                 
-                                {/* Right: The Proclamation */}
                                 <div className="md:col-span-7 space-y-10">
                                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-renaissance leading-tight text-slate-900">
                                         We can create what a team of <span className="italic gold-accent">10,000</span> cannot even imagine in their entire lifetimes.
                                     </h2>
                                     
                                     <div className="bg-white p-8 md:p-12 border border-[#d4af37]/30 shadow-xl relative">
-                                        {/* Golden Corner Accents */}
                                         <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 gold-border"></div>
                                         <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 gold-border"></div>
                                         
@@ -262,7 +253,6 @@
                         </div>
                     </section>
 
-                    {/* CHAPTER II: Manifesto / MTSP */}
                     <section id="manifesto" className="bg-fresco py-32 px-4 md:px-8 relative z-20 border-y border-[#d4af37]/20">
                         <div className="max-w-6xl mx-auto">
                             <ChapterHeading chapter="Chapter II" title="Méliès to Spielberg Projects" />
@@ -301,7 +291,6 @@
                         </div>
                     </section>
 
-                    {/* CHAPTER III: The Latent Universe */}
                     <section id="latent" className="bg-marble py-32 px-4 md:px-8 relative z-20">
                         <div className="max-w-6xl mx-auto">
                             <ChapterHeading chapter="Chapter III" title="The Latent Universe" />
@@ -324,7 +313,6 @@
                                 </div>
                             </div>
 
-                            {/* The God Prompt - Massive Engraved Scale */}
                             <div className="renaissance-frame text-center p-16 md:p-24 max-w-4xl mx-auto my-16">
                                 <h3 className="font-renaissance text-6xl md:text-8xl leading-none mb-8 text-slate-900">
                                     AND A<br/><span className="gold-accent text-7xl md:text-9xl">"GOD PROMPT"</span>
@@ -348,14 +336,12 @@
                         </div>
                     </section>
 
-                    {/* CHAPTER IV: Cinematic Epics */}
                     <section id="epics" className="bg-fresco py-32 px-4 md:px-8 relative z-20 border-t border-[#d4af37]/20">
                         <div className="max-w-7xl mx-auto">
                             <ChapterHeading chapter="Chapter IV" title="Cinematic Epics" />
                             
                             <p className="font-classic italic text-center text-slate-600 text-2xl mb-20">Sacred Texts and Salvaged Artifacts of the Latent Age</p>
                             
-                            {/* Vault of Major Artifacts */}
                             <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                                 <a href="https://www.youtube.com/watch?v=7ed-oBmh5_A" target="_blank" rel="noreferrer" className="block group">
                                     <div className="bg-white border border-[#d4af37]/30 shadow-lg p-6 h-full flex flex-col transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl">
@@ -400,7 +386,6 @@
                         </div>
                     </section>
 
-                    {/* CHAPTER V: Music & Visual Poetry */}
                     <section id="poetry" className="bg-marble py-32 px-4 md:px-8 relative z-20 border-t border-[#d4af37]/20">
                         <div className="max-w-7xl mx-auto">
                             <ChapterHeading chapter="Chapter V" title="Music & Visual Poetry" />
@@ -437,13 +422,11 @@
                         </div>
                     </section>
 
-                    {/* CHAPTER VI: The Unwritten Frescoes */}
                     <section id="slate" className="bg-fresco py-32 px-4 md:px-8 relative z-20 border-t border-[#d4af37]/20">
                         <div className="max-w-7xl mx-auto">
                             <ChapterHeading chapter="Chapter VI" title="The Unwritten Frescoes" />
                             
                             <div className="grid md:grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto">
-                                {/* Panel 1 */}
                                 <div className="triptych-panel p-10 flex flex-col items-center text-center">
                                     <div className="w-12 h-12 mb-6 border border-[#d4af37] flex items-center justify-center transform rotate-45">
                                         <div className="w-6 h-6 bg-[#d4af37]"></div>
@@ -455,7 +438,6 @@
                                     </p>
                                 </div>
 
-                                {/* Panel 2 */}
                                 <div className="triptych-panel p-10 flex flex-col items-center text-center">
                                     <div className="w-12 h-12 mb-6 border border-[#d4af37] flex items-center justify-center transform rotate-45">
                                         <div className="w-6 h-6 border-2 border-[#d4af37]"></div>
@@ -470,7 +452,6 @@
                         </div>
                     </section>
 
-                    {/* CHAPTER VII: MTSP Innovation */}
                     <section id="innovation" className="bg-marble py-32 px-4 md:px-8 relative z-20 border-t border-[#d4af37]/20">
                         <div className="max-w-7xl mx-auto">
                             <ChapterHeading chapter="Chapter VII" title="MTSP Innovation" />
@@ -502,13 +483,12 @@
                                 </div>
                                 <div className="bg-white border border-[#d4af37]/30 shadow-md p-8 flex flex-col text-left group hover:-translate-y-1 transition-transform duration-300">
                                     <h3 className="font-renaissance text-2xl mb-4 text-[#d4af37]">6. LLT</h3>
-                                    <p className="font-classic text-lg text-slate-700 leading-relaxed">LARGE LATENT TRAVELER - A SIGNIFICANT CAMERA AND VIRTUAL REALITY AND LATENT WORLD DEVICE.</p>
+                                    <p className="font-classic text-lg text-slate-700 leading-relaxed">LARGE LATENT TRAVELER - A significant latent world device—a camera designed to sneak directly into the latent world and present the findings to the user.</p>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    {/* CHAPTER VIII: The Architects (Dossiers) */}
                     <section id="architects" className="bg-fresco py-32 px-4 md:px-8 relative z-20 border-t border-[#d4af37]/20">
                         <div className="max-w-7xl mx-auto">
                             <ChapterHeading chapter="Chapter VIII" title="The Architects" />
@@ -517,13 +497,9 @@
                                 <h3 className="font-renaissance text-4xl md:text-5xl text-slate-900 mb-6 uppercase tracking-wide">
                                     The Family From The Future
                                 </h3>
-                                <p className="italic font-classic text-slate-800 text-2xl md:text-3xl max-w-4xl mx-auto">
-                                    "There is a man who paints worlds that do not exist, scores music for civilisations not yet born, directs films without a crew of fifty..."
-                                </p>
                             </div>
 
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                                {/* Rishi */}
                                 <div className="bg-white border border-[#d4af37]/30 shadow-lg p-6 flex flex-col items-center text-center">
                                     <div className="w-48 h-60 mb-6 overflow-hidden relative shadow-md border-4 border-[#d4af37]/40 p-1 bg-white">
                                         <img src="https://drive.google.com/thumbnail?id=1PqrwKtcoN3PW4ShY2K83GyHadtvd6apB&sz=w800" alt="Rishi Ravinder Goswami" className="w-full h-full object-cover gallery-img" />
@@ -532,7 +508,6 @@
                                     <h3 className="text-2xl font-renaissance text-slate-900">Rishi Ravinder Goswami</h3>
                                 </div>
 
-                                {/* Anita */}
                                 <div className="bg-white border border-[#d4af37]/30 shadow-lg p-6 flex flex-col items-center text-center">
                                     <div className="w-48 h-60 mb-6 overflow-hidden relative shadow-md border-4 border-[#d4af37]/40 p-1 bg-white">
                                         <img src="https://drive.google.com/thumbnail?id=1IKYs8JA1Zco61Il-ZwACh1B8RVj2kz4c&sz=w800" alt="Anita Ravinder Goswami" className="w-full h-full object-cover gallery-img-mono" />
@@ -541,7 +516,6 @@
                                     <h3 className="text-2xl font-renaissance text-slate-900">Anita Ravinder Goswami</h3>
                                 </div>
 
-                                {/* Rashi */}
                                 <div className="bg-white border border-[#d4af37]/30 shadow-lg p-6 flex flex-col items-center text-center">
                                     <div className="w-48 h-60 mb-6 overflow-hidden relative shadow-md border-4 border-[#d4af37]/40 p-1 bg-white">
                                         <img src="https://drive.google.com/thumbnail?id=1O1pI_NnBEHudwgig9GVnu_LOOjmNN1hJ&sz=w800" alt="Rashi Ravinder Goswami" className="w-full h-full object-cover gallery-img-mono" />
@@ -550,7 +524,6 @@
                                     <h3 className="text-2xl font-renaissance text-slate-900">Rashi Ravinder Goswami</h3>
                                 </div>
 
-                                {/* Ravinder */}
                                 <div className="bg-white border border-[#d4af37]/30 shadow-lg p-6 flex flex-col items-center text-center">
                                     <div className="w-48 h-60 mb-6 overflow-hidden relative shadow-md border-4 border-[#d4af37]/40 p-1 bg-white">
                                         <img src="https://drive.google.com/thumbnail?id=19szihOl6r4qAM657qTvNaL_UZNeaP5UT&sz=w800" alt="Ravinder Kumar Goswami" className="w-full h-full object-cover gallery-img-mono" />
@@ -562,7 +535,6 @@
                         </div>
                     </section>
 
-                    {/* Initiate (Footer) */}
                     <footer className="bg-marble py-24 px-4 md:px-8 relative z-20 border-t-8 border-[#d4af37] text-center flex flex-col justify-center items-center">
                         <div className="max-w-4xl mx-auto">
                             <div className="font-sans font-bold text-sm uppercase tracking-widest mb-6 text-slate-500">
